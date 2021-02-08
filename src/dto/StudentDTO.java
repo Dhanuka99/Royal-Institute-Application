@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dto;
 
-/**
- *
- * @author SSNLIVE
- */
+
 public class StudentDTO {
     private String stID;
     private String name;

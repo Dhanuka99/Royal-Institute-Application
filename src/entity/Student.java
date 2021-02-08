@@ -41,37 +41,27 @@ public class Student {
         this.registers = registers;
     }
 
-    /**
-     * @return the stID
-     */
+
     public String getStID() {
         return stID;
     }
 
-    /**
-     * @param stID the stID to set
-     */
+
     public void setStID(String stID) {
         this.stID = stID;
     }
 
-    /**
-     * @return the name
-     */
+
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
+
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @return the address
-     */
+
     public String getAddress() {
         return address;
     }
@@ -87,9 +77,7 @@ public class Student {
 
 
 
-    /**
-     * @param address the address to set
-     */
+
     public void setAddress(String address) {
         this.address = address;
     }

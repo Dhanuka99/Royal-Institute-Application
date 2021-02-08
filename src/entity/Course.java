@@ -34,44 +34,32 @@ public class Course {
         this.registers = registers;
     }
 
-    /**
-     * @return the cID
-     */
+
     public String getcID() {
         return cID;
     }
 
-    /**
-     * @param cID the cID to set
-     */
+
     public void setcID(String cID) {
         this.cID = cID;
     }
 
-    /**
-     * @return the name
-     */
+
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
+
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @return the duration
-     */
+
     public String getDuration() {
         return duration;
     }
 
-    /**
-     * @param duration the duration to set
-     */
+
     public void setDuration(String duration) {
         this.duration = duration;
     }
