@@ -1,87 +1,102 @@
+
 package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 @Entity
 public class Student {
+
     @Id
-    private String id;
-    private String studentName;
+    private String stID;
+    private String name;
     private String address;
-    private String contact;
-    private String dob;
-    private String gender;
+
+    @OneToMany(mappedBy = "student")
+    private List<Register> registers = new ArrayList<>();
 
     public Student() {
     }
 
-    public Student(String id, String studentName, String address, String contact, String dob, String gender) {
-        this.id = id;
-        this.studentName = studentName;
+    public Student(String stID, String name, String address) {
+        this.setStID(stID);
+        this.setName(name);
+        this.setAddress(address);
+    }
+
+    public Student(String name, String address) {
+        this.setName(name);
+        this.setAddress(address);
+    }
+
+    public Student(String stID, String name, String address, List<Register> registers) {
+        this.stID = stID;
+        this.name = name;
         this.address = address;
-        this.contact = contact;
-        this.dob = dob;
-        this.gender = gender;
+        this.registers = registers;
     }
 
-    public String getId() {
-        return id;
+    /**
+     * @return the stID
+     */
+    public String getStID() {
+        return stID;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    /**
+     * @param stID the stID to set
+     */
+    public void setStID(String stID) {
+        this.stID = stID;
     }
 
-    public String getStudentName() {
-        return studentName;
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 
+    /**
+     * @return the address
+     */
     public String getAddress() {
         return address;
     }
 
+
+    public List<Register> getRegisters() {
+        return registers;
+    }
+
+    public void setRegisters(List<Register> registers) {
+        this.registers = registers;
+    }
+
+
+
+    /**
+     * @param address the address to set
+     */
     public void setAddress(String address) {
         this.address = address;
     }
 
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     @Override
     public String toString() {
-        return "Student{" +
-                "id='" + id + '\'' +
-                ", studentName='" + studentName + '\'' +
-                ", address='" + address + '\'' +
-                ", contact='" + contact + '\'' +
-                ", dob='" + dob + '\'' +
-                ", gender='" + gender + '\'' +
-                '}';
+        return "Student{" + "stID=" + getStID() + ", name=" + getName() + ", address=" + getAddress() + '}';
     }
+    
 }
