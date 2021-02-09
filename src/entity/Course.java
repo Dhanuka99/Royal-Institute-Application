@@ -1,9 +1,11 @@
 
 package entity;
 
+
+import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import java.util.List;
-
+@Entity
 public class Course {
 
    private String courseCode;

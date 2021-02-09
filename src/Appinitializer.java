@@ -3,10 +3,23 @@ import entity.Register;
 import entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 import util.FactoryConfiguration;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 public class Appinitializer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream("src/hibernate.properties");
+        Properties props = new Properties();
+        props.load(fis);
+
+        Configuration configuration = new Configuration();
+        configuration.setProperties(props);
+       // configuration.addFile("student.hbm.xml");
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
