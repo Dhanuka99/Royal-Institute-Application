@@ -19,18 +19,32 @@ public class Student {
     private String studentContact;
     private String studentDOB;
     private String studentGender;
+    @OneToOne
+    private Register register;
+    @ManyToMany
+    private List<Course> courses;
 
 
     public Student() {
     }
 
-    public Student(String studentID, String studentName, String studentAddress, String studentContact, String studentDOB, String studentGender) {
+    public Student(String studentID, String studentName, String studentAddress, String studentContact, String studentDOB, String studentGender, Register register, List<Course> courses) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.studentAddress = studentAddress;
         this.studentContact = studentContact;
         this.studentDOB = studentDOB;
         this.studentGender = studentGender;
+        this.register = register;
+        this.courses = courses;
+    }
+
+    public Register getRegister() {
+        return register;
+    }
+
+    public void setRegister(Register register) {
+        this.register = register;
     }
 
     public String getStudentID() {
@@ -81,6 +95,14 @@ public class Student {
         this.studentGender = studentGender;
     }
 
+    public List<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -90,6 +112,8 @@ public class Student {
                 ", studentContact='" + studentContact + '\'' +
                 ", studentDOB='" + studentDOB + '\'' +
                 ", studentGender='" + studentGender + '\'' +
+                ", register=" + register +
+                ", courses=" + courses +
                 '}';
     }
 }

@@ -1,5 +1,8 @@
 package util;
 
+import entity.Course;
+import entity.Register;
+import entity.Register_PK;
 import entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,7 +21,8 @@ public class FactoryConfiguration {
 
         try {
 
-            Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
+            Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class)
+                    .addAnnotatedClass(Course.class).addAnnotatedClass(Register.class).addAnnotatedClass(Register_PK.class);
             sessionFactory = configuration.buildSessionFactory();
 
 

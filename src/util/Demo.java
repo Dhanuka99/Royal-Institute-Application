@@ -15,9 +15,9 @@ public class Demo {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         Student student = new Student();
-        student.setStID("S001");
+       /* student.setStID("S001");
         student.setName("Dhanuka");
-        student.setAddress("Kurunegala");
+        student.setAddress("Kurunegala");*/
 
 
 
