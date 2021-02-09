@@ -13,78 +13,83 @@ import java.util.List;
 public class Student {
 
     @Id
-    private String stID;
-    private String name;
-    private String address;
+    private String studentID;
+    private String studentName;
+    private String studentAddress;
+    private String studentContact;
+    private String studentDOB;
+    private String studentGender;
 
-    @OneToMany(mappedBy = "student")
-    private List<Register> registers = new ArrayList<>();
 
     public Student() {
     }
 
-    public Student(String stID, String name, String address) {
-        this.setStID(stID);
-        this.setName(name);
-        this.setAddress(address);
+    public Student(String studentID, String studentName, String studentAddress, String studentContact, String studentDOB, String studentGender) {
+        this.studentID = studentID;
+        this.studentName = studentName;
+        this.studentAddress = studentAddress;
+        this.studentContact = studentContact;
+        this.studentDOB = studentDOB;
+        this.studentGender = studentGender;
     }
 
-    public Student(String name, String address) {
-        this.setName(name);
-        this.setAddress(address);
+    public String getStudentID() {
+        return studentID;
     }
 
-    public Student(String stID, String name, String address, List<Register> registers) {
-        this.stID = stID;
-        this.name = name;
-        this.address = address;
-        this.registers = registers;
+    public void setStudentID(String studentID) {
+        this.studentID = studentID;
     }
 
-
-    public String getStID() {
-        return stID;
+    public String getStudentName() {
+        return studentName;
     }
 
-
-    public void setStID(String stID) {
-        this.stID = stID;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
-
-    public String getName() {
-        return name;
+    public String getStudentAddress() {
+        return studentAddress;
     }
 
-
-    public void setName(String name) {
-        this.name = name;
+    public void setStudentAddress(String studentAddress) {
+        this.studentAddress = studentAddress;
     }
 
-
-    public String getAddress() {
-        return address;
+    public String getStudentContact() {
+        return studentContact;
     }
 
-
-    public List<Register> getRegisters() {
-        return registers;
+    public void setStudentContact(String studentContact) {
+        this.studentContact = studentContact;
     }
 
-    public void setRegisters(List<Register> registers) {
-        this.registers = registers;
+    public String getStudentDOB() {
+        return studentDOB;
     }
 
+    public void setStudentDOB(String studentDOB) {
+        this.studentDOB = studentDOB;
+    }
 
+    public String getStudentGender() {
+        return studentGender;
+    }
 
-
-    public void setAddress(String address) {
-        this.address = address;
+    public void setStudentGender(String studentGender) {
+        this.studentGender = studentGender;
     }
 
     @Override
     public String toString() {
-        return "Student{" + "stID=" + getStID() + ", name=" + getName() + ", address=" + getAddress() + '}';
+        return "Student{" +
+                "studentID='" + studentID + '\'' +
+                ", studentName='" + studentName + '\'' +
+                ", studentAddress='" + studentAddress + '\'' +
+                ", studentContact='" + studentContact + '\'' +
+                ", studentDOB='" + studentDOB + '\'' +
+                ", studentGender='" + studentGender + '\'' +
+                '}';
     }
-    
 }

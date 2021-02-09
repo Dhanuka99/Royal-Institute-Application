@@ -1,87 +1,62 @@
 
 package entity;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
-
-
-
-@Entity
-@Table(name = "Course")
 public class Course {
 
-    @Id
-    private String cID;
-    private String name;
-    private String duration;
-
-    @OneToMany(mappedBy = "course", cascade = {CascadeType.PERSIST})
-    private List<Register> registers = new ArrayList<>();
+   private String courseCode;
+   private String courseName;
+   private String courseType;
+   private String duration;
 
     public Course() {
     }
 
-    public Course(String cID, String name, String duration) {
-        this.cID = cID;
-        this.name = name;
+    public Course(String courseCode, String courseName, String courseType, String duration) {
+        this.courseCode = courseCode;
+        this.courseName = courseName;
+        this.courseType = courseType;
         this.duration = duration;
     }
 
-    public Course(String name, String duration, List<Register> registers) {
-        this.name = name;
-        this.duration = duration;
-        this.registers = registers;
+    public String getCourseCode() {
+        return courseCode;
     }
 
-
-    public String getcID() {
-        return cID;
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 
-
-    public void setcID(String cID) {
-        this.cID = cID;
+    public String getCourseName() {
+        return courseName;
     }
 
-
-    public String getName() {
-        return name;
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
-
-    public void setName(String name) {
-        this.name = name;
+    public String getCourseType() {
+        return courseType;
     }
 
+    public void setCourseType(String courseType) {
+        this.courseType = courseType;
+    }
 
     public String getDuration() {
         return duration;
     }
 
-
     public void setDuration(String duration) {
         this.duration = duration;
     }
 
-    public List<Register> getRegisters() {
-        return registers;
-    }
-
-    public Course(String name, String duration) {
-        this.name = name;
-        this.duration = duration;
-    }
-
-    public void setRegisters(List<Register> registers) {
-
-        this.registers = registers;
-    }
-
     @Override
     public String toString() {
-        return "Course{" + "cID=" + cID + ", name=" + name + ", duration=" + duration + '}';
+        return "Course{" +
+                "courseCode='" + courseCode + '\'' +
+                ", courseName='" + courseName + '\'' +
+                ", courseType='" + courseType + '\'' +
+                ", duration='" + duration + '\'' +
+                '}';
     }
-    
-    
 }
