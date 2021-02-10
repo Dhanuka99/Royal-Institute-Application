@@ -3,35 +3,28 @@ package entity;
 
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.util.List;
 @Entity
 public class Course {
-
+    @Id
    private String courseCode;
    private String courseName;
    private String courseType;
    private String duration;
-   @ManyToMany(mappedBy = "Student")
-   private List<Student> students;
+   @ManyToMany
+   private List<Register> registers;
 
     public Course() {
     }
 
-    public Course(String courseCode, String courseName, String courseType, String duration, List<Student> students) {
+    public Course(String courseCode, String courseName, String courseType, String duration, List<Register> registers) {
         this.courseCode = courseCode;
         this.courseName = courseName;
         this.courseType = courseType;
         this.duration = duration;
-        this.students = students;
-    }
-
-    public List<Student> getStudents() {
-        return students;
-    }
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
+        this.registers = registers;
     }
 
     public String getCourseCode() {
@@ -66,6 +59,14 @@ public class Course {
         this.duration = duration;
     }
 
+    public List<Register> getRegisters() {
+        return registers;
+    }
+
+    public void setRegisters(List<Register> registers) {
+        this.registers = registers;
+    }
+
     @Override
     public String toString() {
         return "Course{" +
@@ -73,7 +74,7 @@ public class Course {
                 ", courseName='" + courseName + '\'' +
                 ", courseType='" + courseType + '\'' +
                 ", duration='" + duration + '\'' +
-                ", students=" + students +
+                ", registers=" + registers +
                 '}';
     }
 }

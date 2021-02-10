@@ -19,32 +19,30 @@ public class Student {
     private String studentContact;
     private String studentDOB;
     private String studentGender;
-    @OneToOne
-    private Register register;
-    @ManyToMany
-    private List<Course> courses;
+    @OneToMany(mappedBy = "Student")
+    private List<Register> registers;
+
 
 
     public Student() {
     }
 
-    public Student(String studentID, String studentName, String studentAddress, String studentContact, String studentDOB, String studentGender, Register register, List<Course> courses) {
+    public Student(String studentID, String studentName, String studentAddress, String studentContact, String studentDOB, String studentGender, List<Register> registers) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.studentAddress = studentAddress;
         this.studentContact = studentContact;
         this.studentDOB = studentDOB;
         this.studentGender = studentGender;
-        this.register = register;
-        this.courses = courses;
+        this.registers = registers;
     }
 
-    public Register getRegister() {
-        return register;
+    public List<Register> getRegisters() {
+        return registers;
     }
 
-    public void setRegister(Register register) {
-        this.register = register;
+    public void setRegisters(List<Register> registers) {
+        this.registers = registers;
     }
 
     public String getStudentID() {
@@ -95,13 +93,6 @@ public class Student {
         this.studentGender = studentGender;
     }
 
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
-    }
 
     @Override
     public String toString() {
@@ -112,8 +103,7 @@ public class Student {
                 ", studentContact='" + studentContact + '\'' +
                 ", studentDOB='" + studentDOB + '\'' +
                 ", studentGender='" + studentGender + '\'' +
-                ", register=" + register +
-                ", courses=" + courses +
+                ", registers=" + registers +
                 '}';
     }
 }
