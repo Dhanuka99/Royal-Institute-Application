@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -9,23 +10,24 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="439.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
+<AnchorPane prefHeight="439.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
    <children>
-      <Pane prefHeight="54.0" prefWidth="693.0" style="-fx-background-color: #343A40;">
+      <Pane prefHeight="54.0" prefWidth="794.0" style="-fx-background-color: #343A40;">
          <children>
             <Label layoutX="265.0" layoutY="14.0" text="Student Form" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="21.0" />
                </font>
             </Label>
-            <JFXTextField focusColor="#45e84f" layoutX="469.0" layoutY="15.0" prefHeight="25.0" prefWidth="210.0" />
          </children>
       </Pane>
-      <TableView layoutX="198.0" layoutY="163.0" prefHeight="252.0" prefWidth="475.0">
+      <TableView layoutX="194.0" layoutY="110.0" prefHeight="325.0" prefWidth="591.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
+      <JFXTextField focusColor="#45e84f" layoutX="7.0" layoutY="64.0" prefHeight="25.0" prefWidth="193.0" promptText="Search ID" unFocusColor="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="215.0" layoutY="64.0" text="Search" textFill="#30a81a" />
    </children>
 </AnchorPane>
