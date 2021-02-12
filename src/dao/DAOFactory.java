@@ -18,9 +18,9 @@ public class DAOFactory {
 
     public <T extends SuperDAO> T getDAO(DAOType DAOType){
         switch (DAOType){
-            case COURSE:return (T) new CourseDAOImpl();
-            case STUDENT:return (T) new StudentDAOImpl();
-            case REGISTER:return (T) new RegistrationDAOImpl();
+            case COURSEDAO:return (T) new CourseDAOImpl();
+            case STUDENTDAO:return (T) new StudentDAOImpl();
+            case REGISTERDAO:return (T) new RegistrationDAOImpl();
             default : return null;
         }
     }
