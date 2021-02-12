@@ -1,8 +1,8 @@
-package business.custom;
+package business;
 
-import business.custom.impl.CourseBOImpl;
-import business.custom.impl.RegisterBOImpl;
-import business.custom.impl.StudentBOImpl;
+import business.impl.CourseBOImpl;
+import business.impl.RegisterBOImpl;
+import business.impl.StudentBOImpl;
 
 public class BOFactory {
     private static BOFactory boFactory;

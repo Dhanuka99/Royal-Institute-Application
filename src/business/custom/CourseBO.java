@@ -1,4 +1,4 @@
 package business.custom;
 
-public class CourseBO {
+public interface CourseBO {
 }

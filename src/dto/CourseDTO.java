@@ -4,67 +4,61 @@ package dto;
 
 public class CourseDTO {
     private String cID;
-    private String name;
-    private String duration;
+    private String cName;
+    private String cType;
+    private String cDuration;
 
     public CourseDTO() {
     }
 
-    public CourseDTO(String cID, String name, String duration) {
+    public CourseDTO(String cID, String cName, String cType, String cDuration) {
         this.cID = cID;
-        this.name = name;
-        this.duration = duration;
+        this.cName = cName;
+        this.cType = cType;
+        this.cDuration = cDuration;
     }
 
-    
-
-    /**
-     * @return the cID
-     */
     public String getcID() {
         return cID;
     }
 
-    /**
-     * @param cID the cID to set
-     */
     public void setcID(String cID) {
         this.cID = cID;
     }
 
-    /**
-     * @return the name
-     */
-    public String getName() {
-        return name;
+    public String getcName() {
+        return cName;
     }
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
+    public void setcName(String cName) {
+        this.cName = cName;
     }
 
-    /**
-     * @return the duration
-     */
-    public String getDuration() {
-        return duration;
+    public String getcType() {
+        return cType;
     }
 
-    /**
-     * @param duration the duration to set
-     */
-    public void setDuration(String duration) {
-        this.duration = duration;
+    public void setcType(String cType) {
+        this.cType = cType;
+    }
+
+    public String getcDuration() {
+        return cDuration;
+    }
+
+    public void setcDuration(String cDuration) {
+        this.cDuration = cDuration;
     }
 
     @Override
     public String toString() {
-        return "CustomerDTO{" + "cID=" + cID + ", name=" + name + ", duration=" + duration + '}';
+        return "CourseDTO{" +
+                "cID='" + cID + '\'' +
+                ", cName='" + cName + '\'' +
+                ", cType='" + cType + '\'' +
+                ", cDuration='" + cDuration + '\'' +
+                '}';
     }
 
-    
-    
+
 }

@@ -1,4 +1,4 @@
-package business.custom;
+package business;
 
 public interface SuperBO {
 }
