@@ -8,9 +8,13 @@ import business.impl.CourseBOImpl;
 import com.jfoenix.controls.JFXTextField;
 import dto.CourseDTO;
 import entity.Course;
+import entity.Register;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CourseFormController {
     public JFXTextField txtCourseCode;
@@ -25,9 +29,11 @@ public class CourseFormController {
         String courseName = txtCourseName.getText();
         String courseType = txtCourseType.getText();
         String courseDuration = txtCourseDuration.getText();
+        List<Register> registers = new ArrayList<>();
 
         try {
-            boolean save = courseBO.save(new CourseDTO(courseCode, courseName, courseType, courseDuration));
+            CourseDTO courseDTO = new CourseDTO(courseCode, courseName, courseType, courseDuration, registers);
+            boolean save = courseBO.save(courseDTO);
             if (save){
                 new Alert(Alert.AlertType.CONFIRMATION,"Course Added..", ButtonType.OK).show();
             }else{

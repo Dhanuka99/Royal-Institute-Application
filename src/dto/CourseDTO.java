@@ -2,20 +2,23 @@
 package dto;
 
 
+import entity.Register;
+
+import java.util.List;
+
 public class CourseDTO {
     private String cID;
     private String cName;
     private String cType;
     private String cDuration;
+    private List<Register> registers;
 
-    public CourseDTO() {
-    }
-
-    public CourseDTO(String cID, String cName, String cType, String cDuration) {
+    public CourseDTO(String cID, String cName, String cType, String cDuration, List<Register> registers) {
         this.cID = cID;
         this.cName = cName;
         this.cType = cType;
         this.cDuration = cDuration;
+        this.registers = registers;
     }
 
     public String getcID() {
@@ -50,6 +53,14 @@ public class CourseDTO {
         this.cDuration = cDuration;
     }
 
+    public List<Register> getRegisters() {
+        return registers;
+    }
+
+    public void setRegisters(List<Register> registers) {
+        this.registers = registers;
+    }
+
     @Override
     public String toString() {
         return "CourseDTO{" +
@@ -57,8 +68,7 @@ public class CourseDTO {
                 ", cName='" + cName + '\'' +
                 ", cType='" + cType + '\'' +
                 ", cDuration='" + cDuration + '\'' +
+                ", registers=" + registers +
                 '}';
     }
-
-
 }

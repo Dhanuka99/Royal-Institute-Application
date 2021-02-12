@@ -8,13 +8,13 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import java.util.List;
 @Entity
-public class Course {
+public class Course implements SuperEntity {
     @Id
    private String courseCode;
    private String courseName;
    private String courseType;
    private String duration;
-   @OneToMany
+   @OneToMany(mappedBy = "course")
    private List<Register> registers;
 
     public Course() {
@@ -26,13 +26,6 @@ public class Course {
         this.courseType = courseType;
         this.duration = duration;
         this.registers = registers;
-    }
-
-    public Course(String courseCode, String courseName, String courseType, String duration) {
-        this.courseCode = courseCode;
-        this.courseName = courseName;
-        this.courseType = courseType;
-        this.duration = duration;
     }
 
     public String getCourseCode() {
@@ -74,6 +67,7 @@ public class Course {
     public void setRegisters(List<Register> registers) {
         this.registers = registers;
     }
+
 
     @Override
     public String toString() {

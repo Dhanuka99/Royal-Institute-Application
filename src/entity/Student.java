@@ -10,7 +10,7 @@ import java.util.List;
 
 
 @Entity
-public class Student {
+public class Student implements SuperEntity {
 
     @Id
     private String studentID;
@@ -19,7 +19,7 @@ public class Student {
     private String studentContact;
     private String studentDOB;
     private String studentGender;
-    @OneToMany(mappedBy = "Student")
+    @OneToMany(mappedBy = "student")
     private List<Register> registers;
     
 

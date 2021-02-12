@@ -8,15 +8,16 @@ import java.util.List;
 
 
 @Entity
-public class Register {
+public class Register implements SuperEntity {
     @Id
     private int regNo;
     private String regDate;
     private double regFee;
     /*many registration have one student*/
     @ManyToOne
+
     private Student student;
-    @OneToMany
+    @ManyToOne
     private Course course;
 
     public Register() {

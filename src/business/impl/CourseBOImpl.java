@@ -13,7 +13,9 @@ public class CourseBOImpl implements CourseBO {
 
     @Override
     public boolean save(CourseDTO dto) throws Exception {
-       return dao.save(new Course(dto.getcID(), dto.getcName(), dto.getcType(), dto.getcDuration()));
+        Course course = new Course(dto.getcID(), dto.getcName(), dto.getcType(), dto.getcDuration(), dto.getRegisters());
+        return dao.save(course);
+
 
     }
 }
