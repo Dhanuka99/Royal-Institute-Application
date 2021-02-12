@@ -28,6 +28,13 @@ public class Course {
         this.registers = registers;
     }
 
+    public Course(String courseCode, String courseName, String courseType, String duration) {
+        this.courseCode = courseCode;
+        this.courseName = courseName;
+        this.courseType = courseType;
+        this.duration = duration;
+    }
+
     public String getCourseCode() {
         return courseCode;
     }

@@ -1,4 +1,6 @@
 package business.custom;
 
-public interface StudentBO {
+import business.SuperBO;
+
+public interface StudentBO extends SuperBO {
 }

@@ -1,4 +1,6 @@
 package business.custom;
 
-public interface RegisterBO {
+import business.SuperBO;
+
+public interface RegisterBO extends SuperBO {
 }
