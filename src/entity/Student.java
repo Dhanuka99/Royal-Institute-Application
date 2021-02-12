@@ -21,6 +21,7 @@ public class Student {
     private String studentGender;
     @OneToMany(mappedBy = "Student")
     private List<Register> registers;
+    
 
 
 

@@ -13,19 +13,21 @@ public class Register {
     private int regNo;
     private String regDate;
     private double regFee;
+    /*many registration have one student*/
     @ManyToOne
     private Student student;
-    @ManyToMany(mappedBy = "Register")
-    private List<Course> courses;
+    @OneToMany
+    private Course course;
 
     public Register() {
     }
 
-    public Register(int regNo, String regDate, double regFee, List<Course> courses) {
+    public Register(int regNo, String regDate, double regFee, Student student, Course course) {
         this.regNo = regNo;
         this.regDate = regDate;
         this.regFee = regFee;
-        this.courses = courses;
+        this.student = student;
+        this.course = course;
     }
 
     public int getRegNo() {
@@ -52,12 +54,20 @@ public class Register {
         this.regFee = regFee;
     }
 
-    public List<Course> getCourses() {
-        return courses;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 
     @Override
@@ -66,7 +76,8 @@ public class Register {
                 "regNo=" + regNo +
                 ", regDate='" + regDate + '\'' +
                 ", regFee=" + regFee +
-                ", courses=" + courses +
+                ", student=" + student +
+                ", course=" + course +
                 '}';
     }
 }

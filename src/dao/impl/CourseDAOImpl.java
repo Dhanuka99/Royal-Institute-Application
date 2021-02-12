@@ -2,13 +2,23 @@ package dao.impl;
 
 import dao.custom.CourseDAO;
 import entity.Course;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import util.FactoryConfiguration;
 
 import java.util.ArrayList;
 
 public class CourseDAOImpl implements CourseDAO {
     @Override
     public Boolean save(Course entity) throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.save(entity);
+
+        transaction.commit();
+        session.close();
+        return true;
     }
 
     @Override

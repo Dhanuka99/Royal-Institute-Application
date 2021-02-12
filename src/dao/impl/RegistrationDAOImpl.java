@@ -2,13 +2,23 @@ package dao.impl;
 
 import dao.custom.RegistrationDAO;
 import entity.Register;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import util.FactoryConfiguration;
 
 import java.util.ArrayList;
 
 public class RegistrationDAOImpl implements RegistrationDAO {
     @Override
     public Boolean save(Register entity) throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.save(entity);
+
+        transaction.commit();
+        session.close();
+        return true;
     }
 
     @Override

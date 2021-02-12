@@ -5,6 +5,7 @@ package entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import java.util.List;
 @Entity
 public class Course {
@@ -13,7 +14,7 @@ public class Course {
    private String courseName;
    private String courseType;
    private String duration;
-   @ManyToMany
+   @OneToMany
    private List<Register> registers;
 
     public Course() {
