@@ -1,4 +1,4 @@
-package business.impl;
+package business.custom.impl;
 
 public class StudentBOImpl {
 }

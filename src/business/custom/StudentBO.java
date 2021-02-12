@@ -1,4 +1,4 @@
-package business;
+package business.custom;
 
 public interface StudentBO {
 }
