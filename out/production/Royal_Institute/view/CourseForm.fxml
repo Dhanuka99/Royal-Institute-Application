@@ -13,7 +13,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="491.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CourseFormController">
    <children>
       <Pane prefHeight="54.0" prefWidth="782.0" style="-fx-background-color: #343A40;">
@@ -23,14 +22,23 @@
                   <Font name="Candara Bold" size="21.0" />
                </font>
             </Label>
+            <Label layoutX="505.0" layoutY="17.0" text="Next Course Count :" textFill="#1fff3d">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNextCount" layoutX="675.0" layoutY="18.0" text="E001" textFill="#ff0b0b">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="465.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-voice-id-60.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <JFXTextField fx:id="txtCourseCode" layoutX="110.0" layoutY="100.0" prefHeight="25.0" prefWidth="267.0" promptText="Course Code" />
-      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="62.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/icons8-voice-id-48.png" />
-         </image>
-      </ImageView>
       <JFXButton layoutX="198.0" layoutY="274.0" prefHeight="33.0" prefWidth="75.0" style="-fx-background-color: #ED6348;" text="Clear" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />

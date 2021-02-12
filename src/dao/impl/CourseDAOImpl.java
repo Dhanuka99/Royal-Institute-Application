@@ -4,6 +4,7 @@ import dao.custom.CourseDAO;
 import entity.Course;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
 import util.FactoryConfiguration;
 
 import java.util.ArrayList;
@@ -39,5 +40,19 @@ public class CourseDAOImpl implements CourseDAO {
     @Override
     public Course findByID(String s) throws Exception {
         return null;
+    }
+
+
+    @Override
+    public String getID() throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        NativeQuery sqlQuery = session.createSQLQuery("select courseCode from Course order by courseCode desc limit 1");
+        String id = (String) sqlQuery.uniqueResult();
+
+        transaction.commit();
+        session.close();
+        return id;
     }
 }

@@ -5,4 +5,6 @@ import dto.CourseDTO;
 
 public interface CourseBO extends SuperBO {
     boolean save(CourseDTO courseDTO) throws Exception;
+
+    String getID() throws Exception;
 }

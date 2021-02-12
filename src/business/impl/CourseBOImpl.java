@@ -18,4 +18,16 @@ public class CourseBOImpl implements CourseBO {
 
 
     }
+
+    @Override
+    public String getID() throws Exception {
+        String id = dao.getID();
+        int newInt = Integer.parseInt(id.substring(1, 4))+1;
+        if (newInt<10){
+            return "E00"+newInt;
+        }else if(newInt<100){
+            return "E0"+newInt;
+        }return "E"+newInt;
+
+    }
 }
