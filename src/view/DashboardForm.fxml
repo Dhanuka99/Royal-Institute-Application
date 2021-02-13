@@ -47,7 +47,7 @@
             <Separator layoutY="153.0" prefHeight="4.0" prefWidth="168.0" />
             <Separator layoutY="200.0" prefHeight="4.0" prefWidth="168.0" />
             <Separator layoutY="-1.0" prefHeight="4.0" prefWidth="168.0" />
-            <Label fx:id="lblStudent" layoutX="66.0" layoutY="20.0" onMouseClicked="#studentOnMouseClicked" onMouseEntered="#OnMouseEnter" text="Student" textFill="#c9c9c9">
+            <Label fx:id="lblStudent" layoutX="66.0" layoutY="20.0" onMouseClicked="#studentOnMouseClicked" onMouseEntered="#OnMouseEnter" styleClass="color-label" stylesheets="@../style.css" text="Student" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
@@ -60,7 +60,7 @@
                   <Image url="@../asserts/icons8-customer-50(1).png" />
                </image>
             </ImageView>
-            <Label fx:id="lblCourse" layoutX="69.0" layoutY="72.0" onMouseClicked="#courseOnMouseClicked" text="Course" textFill="#c9c9c9">
+            <Label fx:id="lblCourse" layoutX="69.0" layoutY="72.0" onMouseClicked="#courseOnMouseClicked" styleClass="color-label" stylesheets="@../style.css" text="Course" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
@@ -73,7 +73,7 @@
                   <Image url="@../asserts/icons8-course-assign-50(1).png" />
                </image>
             </ImageView>
-            <Label fx:id="lblReg" layoutX="55.0" layoutY="122.0" onMouseClicked="#registerOnMouseClicked" text="Registration" textFill="#c9c9c9">
+            <Label fx:id="lblReg" layoutX="55.0" layoutY="122.0" onMouseClicked="#registerOnMouseClicked" styleClass="color-label" stylesheets="@../style.css" text="Registration" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
@@ -86,7 +86,7 @@
                   <Image url="@../asserts/icons8-registration-48.png" />
                </image>
             </ImageView>
-            <Label fx:id="lblReg1" layoutX="47.0" layoutY="170.0" onMouseClicked="#registerOnMouseClicked" text="View Students" textFill="#c9c9c9">
+            <Label fx:id="lblReg1" layoutX="47.0" layoutY="170.0" onMouseClicked="#registerOnMouseClicked" styleClass="color-label" stylesheets="@../style.css" text="View Students" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
@@ -100,7 +100,7 @@
                </image>
             </ImageView>
             <Separator layoutY="246.0" prefHeight="4.0" prefWidth="168.0" />
-            <Label fx:id="lblReg11" layoutX="50.0" layoutY="215.0" onMouseClicked="#registerOnMouseClicked" text="View Courses" textFill="#c9c9c9">
+            <Label fx:id="lblReg11" layoutX="50.0" layoutY="215.0" onMouseClicked="#registerOnMouseClicked" styleClass="color-label" stylesheets="@../style.css" text="View Courses" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
@@ -115,6 +115,9 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="mainPanel" layoutX="168.0" layoutY="53.0" prefHeight="491.0" prefWidth="782.0" />
+      <Pane fx:id="mainPanel" layoutX="168.0" layoutY="53.0" prefHeight="491.0" prefWidth="782.0">
+         <children>
+            <Pane layoutY="472.0" prefHeight="19.0" prefWidth="782.0" style="-fx-background-color: #3A4652;" />
+         </children></Pane>
    </children>
 </AnchorPane>

@@ -1,0 +1,4 @@
+.color-label:hover {
+    -fx-font-weight: 40px;
+    -fx-text-fill: #87CE30;
+}
