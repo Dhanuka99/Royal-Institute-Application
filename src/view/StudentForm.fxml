@@ -13,28 +13,13 @@
 
 <AnchorPane prefHeight="439.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentFormController">
    <children>
-      <Pane prefHeight="54.0" prefWidth="794.0" style="-fx-background-color: #343A40;">
+      <Pane prefHeight="54.0" prefWidth="794.0" style="-fx-background-color: #87CE30;">
          <children>
-            <Label layoutX="265.0" layoutY="14.0" text="Student Form" textFill="#c9c9c9">
+            <Label layoutX="346.0" layoutY="14.0" text="Student Form" textFill="#393939">
                <font>
                   <Font name="Candara Bold" size="21.0" />
                </font>
             </Label>
-            <Label layoutX="522.0" layoutY="17.0" text="Next Student Count :" textFill="#1fff3d">
-               <font>
-                  <Font name="Times New Roman Bold" size="17.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblNextCount" layoutX="692.0" layoutY="18.0" text="C001" textFill="#ff0b0b">
-               <font>
-                  <Font name="Times New Roman Bold" size="17.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="482.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../asserts/icons8-voice-id-60.png" />
-               </image>
-            </ImageView>
          </children>
       </Pane>
       <JFXTextField focusColor="#45e84f" layoutX="7.0" layoutY="64.0" prefHeight="25.0" prefWidth="203.0" promptText="Search ID" unFocusColor="WHITE" />
@@ -110,55 +95,70 @@
       <Separator layoutX="122.0" layoutY="257.0" prefHeight="3.0" prefWidth="119.0" />
       <Separator layoutX="122.0" layoutY="150.0" orientation="VERTICAL" prefHeight="109.0" prefWidth="6.0" />
       <Separator layoutX="241.0" layoutY="150.0" orientation="VERTICAL" prefHeight="109.0" prefWidth="6.0" />
-      <JFXTextField fx:id="txtStudentName" layoutX="479.0" layoutY="127.0" prefHeight="25.0" prefWidth="267.0" promptText="Student Name" />
-      <JFXTextField fx:id="txtStudentAddress" layoutX="479.0" layoutY="182.0" prefHeight="25.0" prefWidth="267.0" promptText="Address" />
-      <JFXTextField fx:id="txtStudentContact" layoutX="479.0" layoutY="231.0" prefHeight="25.0" prefWidth="267.0" promptText="Contact" />
-      <JFXTextField fx:id="txtDOB" layoutX="479.0" layoutY="285.0" prefHeight="25.0" prefWidth="267.0" promptText="Date of Birth" />
-      <Label layoutX="504.0" layoutY="76.0" text="Student Informations" textFill="#003c04">
+      <JFXTextField fx:id="txtStudentName" layoutX="478.0" layoutY="152.0" prefHeight="25.0" prefWidth="267.0" promptText="Student Name" />
+      <JFXTextField fx:id="txtStudentAddress" layoutX="478.0" layoutY="207.0" prefHeight="25.0" prefWidth="267.0" promptText="Address" />
+      <JFXTextField fx:id="txtStudentContact" layoutX="478.0" layoutY="256.0" prefHeight="25.0" prefWidth="267.0" promptText="Contact" />
+      <JFXTextField fx:id="txtDOB" layoutX="478.0" layoutY="310.0" prefHeight="25.0" prefWidth="267.0" promptText="Date of Birth" />
+      <Label layoutX="503.0" layoutY="101.0" text="Student Informations" textFill="#003c04">
          <font>
             <Font name="Candara Bold" size="21.0" />
          </font>
       </Label>
       <Separator layoutX="394.0" layoutY="110.0" orientation="VERTICAL" prefHeight="309.0" prefWidth="0.0" />
-      <JFXButton layoutX="484.0" layoutY="379.0" onAction="#saveOnAction" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #8FCA6C;" text="Save" textFill="WHITE">
+      <JFXButton layoutX="483.0" layoutY="404.0" onAction="#saveOnAction" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #8FCA6C;" text="Save" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="579.0" layoutY="379.0" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #3FC4E0;" text="Update" textFill="WHITE">
+      <JFXButton layoutX="578.0" layoutY="404.0" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #3FC4E0;" text="Update" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton layoutX="669.0" layoutY="379.0" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #ED6348;" text="Clear" textFill="WHITE">
+      <JFXButton layoutX="668.0" layoutY="404.0" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #ED6348;" text="Clear" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="431.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="427.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icons8-customer-52.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="431.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="427.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icons8-address-48.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="431.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="427.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icons8-telephone-60.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="431.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="427.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icons8-birthday-52.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtGender" layoutX="479.0" layoutY="335.0" prefHeight="25.0" prefWidth="267.0" promptText="Gender" />
-      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="431.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+      <JFXTextField fx:id="txtGender" layoutX="478.0" layoutY="360.0" prefHeight="25.0" prefWidth="267.0" promptText="Gender" />
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="427.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icons8-birthday-52.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="468.0" layoutY="65.0" text="Next Student Count :" textFill="#222222">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNextCount" layoutX="638.0" layoutY="66.0" text="C001" textFill="#ff0b0b">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="428.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-voice-id-60.png" />
          </image>
       </ImageView>
    </children>

@@ -16,28 +16,13 @@
 
 <AnchorPane prefHeight="491.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentRegisterFormController">
    <children>
-      <Pane prefHeight="54.0" prefWidth="782.0" style="-fx-background-color: #343A40;">
+      <Pane prefHeight="54.0" prefWidth="782.0" style="-fx-background-color: #87CE30;">
          <children>
-            <Label layoutX="314.0" layoutY="14.0" text="Regitration Form" textFill="#c9c9c9">
+            <Label layoutX="314.0" layoutY="14.0" text="Regitration Form" textFill="#2f2f2f">
                <font>
                   <Font name="Candara Bold" size="21.0" />
                </font>
             </Label>
-            <Label layoutX="524.0" layoutY="14.0" text="Next Registration ID :" textFill="#1fff3d">
-               <font>
-                  <Font name="Times New Roman Bold" size="17.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblRegisterID" layoutX="694.0" layoutY="15.0" text="0" textFill="#ff0b0b">
-               <font>
-                  <Font name="Times New Roman Bold" size="17.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="484.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../asserts/icons8-voice-id-60.png" />
-               </image>
-            </ImageView>
          </children>
       </Pane>
       <Label layoutX="460.0" layoutY="160.0" text="Course Code :" textFill="#003c04">
@@ -87,7 +72,7 @@
             <Image url="@../asserts/icons8-money-48.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="33.0" fitWidth="42.0" layoutX="735.0" layoutY="70.0" onMouseClicked="#lblSearchMouseClicked" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="33.0" fitWidth="42.0" layoutX="728.0" layoutY="109.0" onMouseClicked="#lblSearchMouseClicked" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icons8-search-32.png" />
          </image>
@@ -110,7 +95,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <Pane layoutX="309.0" layoutY="392.0" onMouseClicked="#RegisterMouseClicked" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #8FCA6C;">
+      <Pane layoutX="309.0" layoutY="392.0" onMouseClicked="#RegisterMouseClicked" prefHeight="54.0" prefWidth="288.0" style="-fx-background-color: #87CE30;">
          <children>
             <Label layoutX="93.0" layoutY="14.0" text="Register Applicant" textFill="#343a40">
                <font>
@@ -130,7 +115,7 @@
          </cursor>
       </JFXButton>
       <JFXDatePicker fx:id="registerDate" layoutX="65.0" layoutY="271.0" prefHeight="25.0" prefWidth="267.0" promptText="Date" />
-      <JFXTextField fx:id="txtSearchCourse" layoutX="550.0" layoutY="74.0" prefHeight="25.0" prefWidth="180.0" promptText="Search Course" />
+      <JFXTextField fx:id="txtSearchCourse" layoutX="543.0" layoutY="113.0" prefHeight="25.0" prefWidth="180.0" promptText="Search Course" />
       <Label layoutX="14.0" layoutY="61.0" text="New Registration" textFill="#1b0000">
          <font>
             <Font name="Candara Bold" size="21.0" />
@@ -185,5 +170,20 @@
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Label>
+      <Label layoutX="462.0" layoutY="77.0" text="Next Registration ID :" textFill="#323232">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRegisterID" layoutX="632.0" layoutY="78.0" text="0" textFill="#ff0b0b">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="422.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-voice-id-48.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

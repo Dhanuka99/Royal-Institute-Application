@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
@@ -8,53 +9,108 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="426.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
    <children>
-      <Pane layoutY="-1.0" prefHeight="54.0" prefWidth="950.0" style="-fx-background-color: #343A40;">
+      <Pane layoutY="-1.0" prefHeight="54.0" prefWidth="950.0" style="-fx-background-color: #3A4652;">
          <children>
-            <Label layoutX="392.0" layoutY="14.0" text="Royal Institute Lanka" textFill="#c9c9c9">
+            <Label layoutX="392.0" layoutY="14.0" text="Royal Institute Lanka" textFill="#87ce30">
                <font>
                   <Font name="Candara Bold" size="21.0" />
                </font>
             </Label>
+            <Label layoutX="662.0" layoutY="18.0" text="Date :" textFill="#c9c9c9">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="709.0" layoutY="18.0" text="2021-03-12" textFill="#c9c9c9">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="795.0" layoutY="18.0" text="Time :" textFill="#c9c9c9">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="846.0" layoutY="18.0" text="6.00" textFill="#c9c9c9">
+               <font>
+                  <Font name="Times New Roman Bold" size="16.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Pane layoutY="53.0" prefHeight="491.0" prefWidth="168.0" style="-fx-background-color: #343A40;">
+      <Pane layoutY="53.0" prefHeight="491.0" prefWidth="168.0" style="-fx-background-color: #3A4652; -fx-cursor: #87CE30;">
          <children>
             <Separator layoutY="54.0" prefHeight="4.0" prefWidth="168.0" />
             <Separator layoutY="104.0" prefHeight="4.0" prefWidth="168.0" />
             <Separator layoutY="153.0" prefHeight="4.0" prefWidth="168.0" />
             <Separator layoutY="200.0" prefHeight="4.0" prefWidth="168.0" />
             <Separator layoutY="-1.0" prefHeight="4.0" prefWidth="168.0" />
-            <Label layoutX="61.0" layoutY="20.0" onMouseClicked="#studentOnMouseClicked" text="Student" textFill="#c9c9c9">
+            <Label fx:id="lblStudent" layoutX="66.0" layoutY="20.0" onMouseClicked="#studentOnMouseClicked" onMouseEntered="#OnMouseEnter" text="Student" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Label>
-            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgStudent" fitHeight="33.0" fitWidth="38.0" layoutX="1.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../asserts/icons8-customer-50(1).png" />
                </image>
             </ImageView>
-            <Label layoutX="61.0" layoutY="72.0" onMouseClicked="#courseOnMouseClicked" text="Course" textFill="#c9c9c9">
+            <Label fx:id="lblCourse" layoutX="69.0" layoutY="72.0" onMouseClicked="#courseOnMouseClicked" text="Course" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Label>
-            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="14.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgCourse" fitHeight="33.0" fitWidth="38.0" layoutX="6.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../asserts/icons8-mba-50.png" />
+                  <Image url="@../asserts/icons8-course-assign-50(1).png" />
                </image>
             </ImageView>
-            <Label layoutX="62.0" layoutY="122.0" onMouseClicked="#registerOnMouseClicked" text="Registration" textFill="#c9c9c9">
+            <Label fx:id="lblReg" layoutX="55.0" layoutY="122.0" onMouseClicked="#registerOnMouseClicked" text="Registration" textFill="#c9c9c9">
                <font>
                   <Font name="Candara Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Label>
-            <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="15.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgReg" fitHeight="33.0" fitWidth="38.0" layoutX="4.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../asserts/icons8-registration-48.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblReg1" layoutX="47.0" layoutY="170.0" onMouseClicked="#registerOnMouseClicked" text="View Students" textFill="#c9c9c9">
+               <font>
+                  <Font name="Candara Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="imgReg1" fitHeight="33.0" fitWidth="38.0" layoutX="3.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-graph-50.png" />
+               </image>
+            </ImageView>
+            <Separator layoutY="246.0" prefHeight="4.0" prefWidth="168.0" />
+            <Label fx:id="lblReg11" layoutX="50.0" layoutY="215.0" onMouseClicked="#registerOnMouseClicked" text="View Courses" textFill="#c9c9c9">
+               <font>
+                  <Font name="Candara Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="imgReg11" fitHeight="33.0" fitWidth="38.0" layoutX="3.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icons8-course-assign-50.png" />
                </image>
             </ImageView>
          </children>
