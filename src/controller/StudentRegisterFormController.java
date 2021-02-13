@@ -9,6 +9,7 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import dao.DAOType;
 import entity.Course;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
@@ -52,5 +53,12 @@ public class StudentRegisterFormController {
     }
 
     public void RegisterMouseClicked(MouseEvent mouseEvent) {
+        
+    }
+
+    public void removeOnAction(ActionEvent actionEvent) {
+    }
+
+    public void AddCourseOnAction(ActionEvent actionEvent) {
     }
 }

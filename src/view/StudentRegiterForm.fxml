@@ -111,7 +111,7 @@
             <TableColumn prefWidth="160.0" text="Registration Fee" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnRemoveCourse" layoutX="509.0" layoutY="221.0" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #ED6348;" text="Remove Course" textFill="WHITE">
+      <JFXButton fx:id="btnRemoveCourse" layoutX="509.0" layoutY="221.0" onAction="#removeOnAction" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #ED6348;" text="Remove Course" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -130,7 +130,7 @@
             </ImageView>
          </children>
       </Pane>
-      <JFXButton fx:id="btnAdductors" layoutX="392.0" layoutY="221.0" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #3FC4E0;" text="Add Course" textFill="WHITE">
+      <JFXButton fx:id="btnAdductors" layoutX="392.0" layoutY="221.0" onAction="#AddCourseOnAction" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #3FC4E0;" text="Add Course" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

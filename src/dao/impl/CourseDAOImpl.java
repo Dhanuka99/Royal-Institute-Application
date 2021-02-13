@@ -42,9 +42,9 @@ public class CourseDAOImpl implements CourseDAO {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        NativeQuery sqlQuery = session.createSQLQuery("select * from Course where courseCode=?");
-        Course c = (entity.Course) sqlQuery.uniqueResult();
-        System.out.println(c.getCourseCode()+" "+c.getCourseName());
+
+        Course c = session.get(Course.class, s);
+        System.out.println(c.getCourseCode() + " " + c.getCourseName());
         transaction.commit();
         session.close();
         return c;
@@ -53,14 +53,16 @@ public class CourseDAOImpl implements CourseDAO {
 
     @Override
     public String getID() throws Exception {
+
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
         NativeQuery sqlQuery = session.createSQLQuery("select courseCode from Course order by courseCode desc limit 1");
-        String id = (String) sqlQuery.uniqueResult();
+        String idt = (String) sqlQuery.uniqueResult();
 
         transaction.commit();
         session.close();
-        return id;
+        return idt;
+
     }
 }
