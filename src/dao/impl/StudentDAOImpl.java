@@ -55,4 +55,17 @@ public class StudentDAOImpl implements StudentDAO {
         System.out.println(id);
         return id;
     }
+
+    @Override
+    public Student SearchStudent(String id) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Student student = session.get(Student.class, id);
+        System.out.println(student.getStudentID()+" "+student.getStudentName());
+
+        transaction.commit();
+        session.close();
+        return student;
+    }
 }

@@ -28,7 +28,7 @@
                   <Font name="Times New Roman Bold" size="17.0" />
                </font>
             </Label>
-            <Label fx:id="lblRegisterID" layoutX="694.0" layoutY="15.0" text="R001" textFill="#ff0b0b">
+            <Label fx:id="lblRegisterID" layoutX="694.0" layoutY="15.0" text="1" textFill="#ff0b0b">
                <font>
                   <Font name="Times New Roman Bold" size="17.0" />
                </font>
@@ -80,14 +80,8 @@
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtRegisterID" layoutX="88.0" layoutY="115.0" prefHeight="25.0" prefWidth="267.0" promptText="Register ID" />
       <JFXTextField fx:id="txtregisterFee" layoutX="88.0" layoutY="224.0" prefHeight="25.0" prefWidth="267.0" promptText="Register Fee" />
       <Separator layoutX="371.0" layoutY="70.0" orientation="VERTICAL" prefHeight="207.0" prefWidth="5.0" />
-      <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="40.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../asserts/icons8-customer-52.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="40.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icons8-money-48.png" />
@@ -102,16 +96,16 @@
          </cursor>
       </ImageView>
 
-      <TableView fx:id="tblCourses" layoutX="5.0" layoutY="271.0" prefHeight="148.0" prefWidth="772.0" style="-fx-background-color: gray;">
+      <TableView fx:id="tblCourses" fixedCellSize="1.0" layoutX="5.0" layoutY="271.0" prefHeight="148.0" prefWidth="772.0" style="-fx-background-color: gray;">
         <columns>
-          <TableColumn prefWidth="111.0" text="Register ID" />
-          <TableColumn prefWidth="159.0" text="Student ID" />
-            <TableColumn prefWidth="170.0" text="Course ID" />
-            <TableColumn prefWidth="171.0" text="Date" />
-            <TableColumn prefWidth="160.0" text="Registration Fee" />
+          <TableColumn fx:id="cmbRegID" prefWidth="111.0" text="Register ID" />
+          <TableColumn fx:id="cmbStudentID" prefWidth="159.0" text="Student ID" />
+            <TableColumn fx:id="cmbCourseID" prefWidth="170.0" text="Course ID" />
+            <TableColumn fx:id="cmbRegDate" prefWidth="171.0" text="Date" />
+            <TableColumn fx:id="cmbRegFee" prefWidth="160.0" text="Registration Fee" />
         </columns>
       </TableView>
-      <JFXButton fx:id="btnRemoveCourse" layoutX="509.0" layoutY="221.0" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #ED6348;" text="Remove Course" textFill="WHITE">
+      <JFXButton fx:id="btnRemoveCourse" layoutX="509.0" layoutY="221.0" onAction="#removeOnAction" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #ED6348;" text="Remove Course" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -130,16 +124,45 @@
             </ImageView>
          </children>
       </Pane>
-      <JFXButton fx:id="btnAdductors" layoutX="392.0" layoutY="221.0" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #3FC4E0;" text="Add Course" textFill="WHITE">
+      <JFXButton fx:id="btnAdductors" layoutX="392.0" layoutY="221.0" onAction="#AddCourseOnAction" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #3FC4E0;" text="Add Course" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXDatePicker fx:id="registerDate" layoutX="88.0" layoutY="174.0" prefHeight="25.0" prefWidth="267.0" promptText="Date" />
+      <JFXDatePicker fx:id="registerDate" layoutX="88.0" layoutY="192.0" prefHeight="25.0" prefWidth="267.0" promptText="Date" />
       <JFXTextField fx:id="txtSearchCourse" layoutX="550.0" layoutY="74.0" prefHeight="25.0" prefWidth="180.0" promptText="Search Course" />
-      <Label layoutX="156.0" layoutY="74.0" text="New Registration" textFill="#1b0000">
+      <Label layoutX="14.0" layoutY="61.0" text="New Registration" textFill="#1b0000">
          <font>
             <Font name="Candara Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearchStudentID" layoutX="198.0" layoutY="62.0" promptText="Search Student" />
+      <ImageView fitHeight="33.0" fitWidth="42.0" layoutX="339.0" layoutY="58.0" onMouseClicked="#studentSearchOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icons8-search-32.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="63.0" layoutY="142.0" text="Student Code :" textFill="#003c04">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblsid" layoutX="198.0" layoutY="142.0" text="C001" textFill="#003c04">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="168.0" text="Student Name:" textFill="#003c04">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblsname" layoutX="198.0" layoutY="168.0" text="Lakmal" textFill="#003c04">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Label>
    </children>

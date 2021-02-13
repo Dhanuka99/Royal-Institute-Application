@@ -33,5 +33,11 @@ public class StudentBOImpl implements StudentBO {
         return "C"+newID;
     }
 
+    @Override
+    public Student search(String sid) throws Exception {
+        Student student = dao.SearchStudent(sid);
+        return student;
+    }
+
 
 }

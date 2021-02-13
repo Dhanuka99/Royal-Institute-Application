@@ -6,85 +6,72 @@ import java.util.Date;
 
 
 public class RegisterDTO {
-    
+
+    private String regID;
     private String stID;
     private String cID;
-    private Date regDate;
-    private BigDecimal fee;
+    private String regDate;
+    private double fee;
 
     public RegisterDTO() {
     }
 
-    public RegisterDTO(String stID, String cID, Date regDate, BigDecimal fee) {
+    public RegisterDTO(String regID, String stID, String cID, String regDate, double fee) {
+        this.regID = regID;
         this.stID = stID;
         this.cID = cID;
         this.regDate = regDate;
         this.fee = fee;
     }
 
-    /**
-     * @return the stID
-     */
+    public String getRegID() {
+        return regID;
+    }
+
+    public void setRegID(String regID) {
+        this.regID = regID;
+    }
+
     public String getStID() {
         return stID;
     }
 
-    /**
-     * @param stID the stID to set
-     */
     public void setStID(String stID) {
         this.stID = stID;
     }
 
-    /**
-     * @return the cID
-     */
     public String getcID() {
         return cID;
     }
 
-    /**
-     * @param cID the cID to set
-     */
     public void setcID(String cID) {
         this.cID = cID;
     }
 
-    /**
-     * @return the regDate
-     */
-    public Date getRegDate() {
+    public String getRegDate() {
         return regDate;
     }
 
-    /**
-     * @param regDate the regDate to set
-     */
-    public void setRegDate(Date regDate) {
+    public void setRegDate(String regDate) {
         this.regDate = regDate;
     }
 
-    /**
-     * @return the fee
-     */
-    public BigDecimal getFee() {
+    public double getFee() {
         return fee;
     }
 
-    /**
-     * @param fee the fee to set
-     */
-    public void setFee(BigDecimal fee) {
+    public void setFee(double fee) {
         this.fee = fee;
     }
 
     @Override
     public String toString() {
-        return "RegisterDTO{" + "stID=" + stID + ", cID=" + cID + ", regDate=" + regDate + ", fee=" + fee + '}';
+        return "RegisterDTO{" +
+                "regID='" + regID + '\'' +
+                ", stID='" + stID + '\'' +
+                ", cID='" + cID + '\'' +
+                ", regDate='" + regDate + '\'' +
+                ", fee=" + fee +
+                '}';
     }
-    
-    
-    
-    
-    
 }
