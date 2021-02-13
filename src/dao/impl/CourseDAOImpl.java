@@ -39,7 +39,15 @@ public class CourseDAOImpl implements CourseDAO {
 
     @Override
     public Course findByID(String s) throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        NativeQuery sqlQuery = session.createSQLQuery("select * from Course where courseCode=?");
+        Course c = (entity.Course) sqlQuery.uniqueResult();
+        System.out.println(c.getCourseCode()+" "+c.getCourseName());
+        transaction.commit();
+        session.close();
+        return c;
     }
 
 
