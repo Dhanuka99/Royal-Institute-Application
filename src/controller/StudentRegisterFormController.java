@@ -10,6 +10,7 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import com.sun.javafx.css.CssError;
 import dao.DAOType;
+import dto.CourseDTO;
 import dto.RegisterDTO;
 import dto.StudentDTO;
 import entity.Course;
@@ -41,6 +42,11 @@ public class StudentRegisterFormController {
     public Label lblsid;
     public Label lblsname;
     public TableColumn cmbRegFee;
+    public Label lblName;
+    public Label lblAddress;
+    public Label lblDOB;
+    public JFXTextField txtregisterFee;
+    public Label lblname;
     private List<RegisterDTO> itemList = new ArrayList<>();
 
     @FXML
@@ -62,6 +68,10 @@ public class StudentRegisterFormController {
     RegisterBOImpl bo = BOFactory.getInstance().getBO(BOType.REGISTERBO);
     StudentBOImpl Studentbo = BOFactory.getInstance().getBO(BOType.STUDENTBO);
 
+    public void initialize(){
+        genarateID();
+    }
+
     private void setTableColumn() {
         cmbRegID.setCellValueFactory(new PropertyValueFactory<RegisterDTO, String>("regNo"));
         cmbCourseID.setCellValueFactory(new PropertyValueFactory<RegisterDTO, String>("courseCode"));
@@ -77,7 +87,7 @@ public class StudentRegisterFormController {
             Course course = bo.searchCourse(id);
             if (course != null) {
                 lblCid.setText(course.getCourseCode());
-                lblCname.setText(course.getCourseName());
+                lblname.setText(course.getCourseName());
                 lblDuration.setText(course.getDuration());
                 lblType.setText(course.getCourseType());
             } else {
@@ -91,22 +101,54 @@ public class StudentRegisterFormController {
 
     }
 
+    private void genarateID(){
+        try {
+            String lastID = bo.getLastID();
+            lblRegisterID.setText(lastID);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public void RegisterMouseClicked(MouseEvent mouseEvent) {
+
+        String rid = lblRegisterID.getText();
+        String sid = lblsid.getText();
+        String cid = lblCid.getText();
+        String date = registerDate.getValue().toString();
+        double fee = Double.parseDouble(txtregisterFee.getText());
+
+
+        RegisterDTO registerDTO = new RegisterDTO(rid, sid, cid, date, fee);
+        try {
+            boolean b = bo.saveRegistration(registerDTO);
+            if (b){
+                new Alert(Alert.AlertType.CONFIRMATION,"Registration Successfully",ButtonType.OK).show();
+                genarateID();
+                clear();
+            }else{
+                new Alert(Alert.AlertType.CONFIRMATION,"Registration not Successfully",ButtonType.OK).show();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
 
     public void removeOnAction(ActionEvent actionEvent) {
     }
 
-    private int isExist(String code) {
+/*    private int isExist(String code) {
         for (int i = 0; i < tblCourses.getItems().size(); i++) {
             if (code.equals(tblCourses.getItems().get(i).getRegID())) {
                 return i;
             }
         }
         return -1;
-    }
+    }*/
 
+/*
     public void AddCourseOnAction(ActionEvent actionEvent) {
 
         System.out.println("111111");
@@ -138,6 +180,7 @@ public class StudentRegisterFormController {
 
 
     }
+*/
 
     public void studentSearchOnAction(MouseEvent mouseEvent) {
         String sid = txtSearchStudentID.getText();
@@ -145,8 +188,10 @@ public class StudentRegisterFormController {
         try {
             Student s = Studentbo.search(sid);
             if (s != null) {
-                lblCid.setText(s.getStudentID());
-                lblsname.setText(s.getStudentName());
+                lblsid.setText(s.getStudentID());
+                lblname.setText(s.getStudentName());
+                lblAddress.setText(s.getStudentAddress());
+                lblDOB.setText(s.getStudentDOB());
 
             } else {
                 new Alert(Alert.AlertType.ERROR, "Student Not Found..", ButtonType.OK).show();
@@ -154,6 +199,15 @@ public class StudentRegisterFormController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+    public void AddCourseOnAction(ActionEvent actionEvent) {
+    }
+
+    private void clear(){
+        txtregisterFee.clear();
+        txtSearchCourse.clear();
 
     }
 }

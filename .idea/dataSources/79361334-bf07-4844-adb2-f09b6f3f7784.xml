@@ -944,7 +944,7 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
     </key>
     <column id="295" parent="288" name="regNo">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="296" parent="288" name="regDate">
@@ -964,55 +964,37 @@ APPLICATION_PASSWORD_ADMIN,AUDIT_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTI
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <index id="300" parent="288" name="FK95yjl1fjsilua0cu1ysdck6bw">
-      <ColNames>course_courseCode</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="301" parent="288" name="FK7p8jkx6b6j3wo5pmi3q3xqffv">
-      <ColNames>student_studentID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="302" parent="288" name="PRIMARY">
+    <key id="300" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>regNo</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="303" parent="288" name="FK95yjl1fjsilua0cu1ysdck6bw">
-      <ColNames>course_courseCode</ColNames>
-      <RefTableName>course</RefTableName>
-      <RefColNames>courseCode</RefColNames>
-    </foreign-key>
-    <foreign-key id="304" parent="288" name="FK7p8jkx6b6j3wo5pmi3q3xqffv">
-      <ColNames>student_studentID</ColNames>
-      <RefTableName>student</RefTableName>
-      <RefColNames>studentID</RefColNames>
-    </foreign-key>
-    <column id="305" parent="289" name="studentID">
+    <column id="301" parent="289" name="studentID">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="306" parent="289" name="studentAddress">
+    <column id="302" parent="289" name="studentAddress">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="307" parent="289" name="studentContact">
+    <column id="303" parent="289" name="studentContact">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="308" parent="289" name="studentDOB">
+    <column id="304" parent="289" name="studentDOB">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="309" parent="289" name="studentGender">
+    <column id="305" parent="289" name="studentGender">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="310" parent="289" name="studentName">
+    <column id="306" parent="289" name="studentName">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="311" parent="289" name="PRIMARY">
+    <key id="307" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>studentID</ColNames>
       <Primary>1</Primary>

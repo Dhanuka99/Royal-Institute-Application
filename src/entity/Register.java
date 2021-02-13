@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 public class Register implements SuperEntity {
     @Id
-    private int regNo;
+    private String regNo;
     private String regDate;
     private double regFee;
     /*many registration have one student*/
@@ -23,7 +23,7 @@ public class Register implements SuperEntity {
     public Register() {
     }
 
-    public Register(int regNo, String regDate, double regFee, Student student, Course course) {
+    public Register(String regNo, String regDate, double regFee, Student student, Course course) {
         this.regNo = regNo;
         this.regDate = regDate;
         this.regFee = regFee;
@@ -31,11 +31,11 @@ public class Register implements SuperEntity {
         this.course = course;
     }
 
-    public int getRegNo() {
+    public String getRegNo() {
         return regNo;
     }
 
-    public void setRegNo(int regNo) {
+    public void setRegNo(String regNo) {
         this.regNo = regNo;
     }
 
