@@ -34,11 +34,7 @@ Technology Stack:-Java-FX | Hibernate Frame Work-JPA | JDBC | HQL
       alt="API stability" />
   </a>
   
-    <!-- Test Coverage -->
-  <a href="https://codecov.io/github/choojs/choo">
-    <img src="https://img.shields.io/codecov/c/github/choojs/choo/master.svg?style=flat-square"
-      alt="Test Coverage" />
-  </a>
+
   
   <!-- NPM version -->
   <a href="https://npmjs.org/package/choo">
