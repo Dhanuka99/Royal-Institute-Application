@@ -1,18 +1,3 @@
-# Royal-Institute-Application
-**A system which can manage a student Registraions for classes.**
-
-Technology Stack:-Java-FX | Hibernate Frame Work-JPA | JDBC | HQL
-
-
-
-
-
-![Technology Stack](https://img.shields.io/badge/javaFX-MySQL-brightgreen.svg)
-![Architchture](https://img.shields.io/badge/Architechure-Expanded%20version%20of%20MVC-orange.svg)
-
-
-**Design Patterns:-Singleton,Facade,Factory,Strategy,DTO,DAO**
-
 <h1 align="center">Royal Institute</h1>
 
 <div align="center">
@@ -49,9 +34,12 @@ Technology Stack:-Java-FX | Hibernate Frame Work-JPA | JDBC | HQL
   </a>
 </div>
 
-
+<div align="center">
+  <p>Technology Stack:-<code>Java-FX</code> | Hibernate Frame Work-JPA |<code> JDBC </code>| <code>HQL</code></p>
+    A <code>Design Patterns</code>**Singleton,Facade,Factory,Strategy,DTO,DAO**
+  </div>
 
 <div align="center">
   <sub>The little framework that could. Built with ❤︎ by
-  <a href="https://twitter.com/yoshuawuyts">Dhanuka Lakshan</a>
+  <a href="https://www.facebook.com/dhanuka.lakshan.395/">Dhanuka Lakshan</a>
 </div>
