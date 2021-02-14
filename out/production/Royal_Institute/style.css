@@ -2,3 +2,12 @@
     -fx-font-weight: 40px;
     -fx-text-fill: #87CE30;
 }
+#imgStudent :hover{
+    -fx-background-color: #87CE30 ;
+}
+
+.color-panel {
+    -fx-background-color: #87CE30;
+    -fx-background-radius: 10px;
+
+}

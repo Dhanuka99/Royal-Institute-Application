@@ -8,14 +8,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class LoginFormController {
     public JFXPasswordField PSpassword;
@@ -27,12 +25,12 @@ public class LoginFormController {
 
 
     public void initialize(){
-     /*   img.setImage(new Image("lk/vocational_training/hibernate/icons/526-5266889_college-students-clipart-hd-png-download.png"));
+     /*   img.setImage(new Image(""));
 
-        imgEye.setImage(new Image("lk/vocational_training/hibernate/icons/eye-24-512.png"));*/
+        imgEye.setImage(new Image(""));*/
     }
 
-    public void loginOnAction(ActionEvent event) {
+    public void loginOnAction(MouseEvent event) {
 
         String userName=txtUserName.getText().trim();
         String password= PSpassword.getText().trim();
