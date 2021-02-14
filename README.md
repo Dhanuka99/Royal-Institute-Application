@@ -1,6 +1,3 @@
-
-:star: Star us on GitHub — it helps!
-
 <h1 align="center">Royal Institute</h1>
 
 <div align="center">
@@ -55,5 +52,6 @@
     <img src="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/Untitled.png" alt="Registration form" width =auto height = 450px />
     </div>
   </div>
-  
+ :star: Star us on GitHub — it helps!
+ :like : visit GitHub
   
