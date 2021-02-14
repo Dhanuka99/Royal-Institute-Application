@@ -1,4 +1,14 @@
 # Royal-Institute-Application
-Java-FX | Hibernate Frame Work-JPA | JDBC | HQL
+**A system which can manage a student Registraions for classes.**
 
-![Alt text](Royal-Institute-Application/tree/main/src/project_photos/1.png?raw=true "Registration Form")
+Technology Stack:-Java-FX | Hibernate Frame Work-JPA | JDBC | HQL
+
+
+
+
+
+![Technology Stack](https://img.shields.io/badge/javaFX-MySQL-brightgreen.svg)
+![Architchture](https://img.shields.io/badge/Architechure-Expanded%20version%20of%20MVC-orange.svg)
+
+
+**Design Patterns:-Singleton,Facade,Factory,Strategy,DTO,DAO**
