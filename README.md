@@ -37,15 +37,14 @@
   </a>
 </div>
 
-
-
 <div align="center">
+  <p>Technology Stack:-<code>Java-FX</code> | Hibernate Frame Work-JPA |<code> JDBC </code>| <code>HQL</code> | <code>CSS</code></p>
+    A <code>Design Patterns</code>**Singleton,Facade,Factory,Strategy,DTO,DAO**
+  </div>
+
+<div align="center" >
   <sub>The little framework that could. Built with ❤︎ by
   <a href="https://www.facebook.com/dhanuka.lakshan.395/">Dhanuka Lakshan</a>
 </div>
-  <h3>Student Details Form</h3>
-  <div align="center">
-    <img src ="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/1.png" width=auto height= 450pxpx />
-    </div>
   
-
+   
