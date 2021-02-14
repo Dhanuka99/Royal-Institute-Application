@@ -33,6 +33,13 @@ Technology Stack:-Java-FX | Hibernate Frame Work-JPA | JDBC | HQL
     <img src="https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square"
       alt="API stability" />
   </a>
+  
+    <!-- Test Coverage -->
+  <a href="https://codecov.io/github/choojs/choo">
+    <img src="https://img.shields.io/codecov/c/github/choojs/choo/master.svg?style=flat-square"
+      alt="Test Coverage" />
+  </a>
+  
   <!-- NPM version -->
   <a href="https://npmjs.org/package/choo">
     <img src="https://img.shields.io/npm/v/choo.svg?style=flat-square"
@@ -50,5 +57,5 @@ Technology Stack:-Java-FX | Hibernate Frame Work-JPA | JDBC | HQL
 
 <div align="center">
   <sub>The little framework that could. Built with ❤︎ by
-  <a href="https://twitter.com/yoshuawuyts">Dhanuka Lakshan</a> and
+  <a href="https://twitter.com/yoshuawuyts">Dhanuka Lakshan</a>
 </div>
