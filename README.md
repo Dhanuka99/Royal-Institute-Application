@@ -43,6 +43,7 @@
   <sub>The little framework that could. Built with ❤︎ by
   <a href="https://www.facebook.com/dhanuka.lakshan.395/">Dhanuka Lakshan</a>
 </div>
+  <h3>Student Details Form</h3>
   <div align="center">
     <img src ="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/1.png" width=auto height= 450pxpx />
     </div>
