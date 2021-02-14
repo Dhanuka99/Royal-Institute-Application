@@ -47,6 +47,8 @@ public class StudentRegisterFormController {
     public Label lblDOB;
     public JFXTextField txtregisterFee;
     public Label lblname;
+    public Label lblcuName;
+    public Label lblstName;
     private List<RegisterDTO> itemList = new ArrayList<>();
 
     @FXML
@@ -87,7 +89,7 @@ public class StudentRegisterFormController {
             Course course = bo.searchCourse(id);
             if (course != null) {
                 lblCid.setText(course.getCourseCode());
-                lblname.setText(course.getCourseName());
+                lblcuName.setText(course.getCourseName());
                 lblDuration.setText(course.getDuration());
                 lblType.setText(course.getCourseType());
             } else {
@@ -189,7 +191,7 @@ public class StudentRegisterFormController {
             Student s = Studentbo.search(sid);
             if (s != null) {
                 lblsid.setText(s.getStudentID());
-                lblname.setText(s.getStudentName());
+                lblstName.setText(s.getStudentName());
                 lblAddress.setText(s.getStudentAddress());
                 lblDOB.setText(s.getStudentDOB());
 

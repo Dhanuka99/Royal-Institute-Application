@@ -40,7 +40,7 @@
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lblCname" layoutX="552.0" layoutY="195.0" text="null" textFill="#003c04">
+      <Label fx:id="lblcuName" layoutX="552.0" layoutY="195.0" text="null" textFill="#003c04">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
@@ -140,7 +140,7 @@
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lblname" layoutX="198.0" layoutY="170.0" text="null" textFill="#003c04">
+      <Label fx:id="lblstName" layoutX="198.0" layoutY="170.0" text="null" textFill="#003c04">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
          </font>
