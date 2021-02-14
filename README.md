@@ -47,7 +47,4 @@
   <a href="https://www.facebook.com/dhanuka.lakshan.395/">Dhanuka Lakshan</a>
 </div>
   
- <div align="center">
- [![Aimeos TYPO3 demo](src/project_photos/1.png)](https://github.com/Dhanuka99/Royal-Institute-Application)
-</div>
   
