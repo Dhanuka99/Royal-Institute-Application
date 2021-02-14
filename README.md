@@ -35,10 +35,6 @@
   </a>
 </div>
 
-<div align="center">
-  <p>Technology Stack:-<code>Java-FX</code> | Hibernate Frame Work-JPA |<code> JDBC </code>| <code>HQL</code> | <code>CSS</code></p>
-    A <code>Design Patterns</code>**Singleton,Facade,Factory,Strategy,DTO,DAO**
-  </div>
 
 <div align="center" >
   <sub>The little framework that could. Built with ❤︎ by
