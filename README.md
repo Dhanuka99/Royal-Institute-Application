@@ -48,6 +48,6 @@
 </div>
   
  <div align="center">
- [![Aimeos TYPO3 demo](https://github.com/Dhanuka99/Royal-Institute-Application/tree/main/src/project_photos/1.png)](http://typo3.demo.aimeos.org/)
+ [![Aimeos TYPO3 demo](src/project_photos/1.png)](https://github.com/Dhanuka99/Royal-Institute-Application)
 </div>
   
