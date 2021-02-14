@@ -47,4 +47,4 @@
   <a href="https://www.facebook.com/dhanuka.lakshan.395/">Dhanuka Lakshan</a>
 </div>
   
-  
+    <div align="center"><img src="https://raw.githubusercontent.com/Dhanuka99/Royal-Institute-Application/main/src/project_photos/1.png" alt="Registration Form" width=auto height=100px/></div>
