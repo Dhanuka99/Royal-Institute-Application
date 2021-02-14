@@ -44,7 +44,7 @@
   <a href="https://www.facebook.com/dhanuka.lakshan.395/">Dhanuka Lakshan</a>
 </div>
   <div align="center">
-    <img src ="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/1.png" width=auto height= 600pxpx />
+    <img src ="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/1.png" width=auto height= 450pxpx />
     </div>
   
 
