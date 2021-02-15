@@ -1,3 +1,5 @@
+import animatefx.animation.FadeIn;
+import animatefx.animation.Pulse;
 import entity.Course;
 import entity.Register;
 import entity.Student;
@@ -23,7 +25,9 @@ public class Appinitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("view/LoginForm.fxml"))));
+        Parent load = FXMLLoader.load(this.getClass().getResource("view/LoginForm.fxml"));
+        new FadeIn(load).play();
+        primaryStage.setScene(new Scene(load));
         primaryStage.show();
 
 

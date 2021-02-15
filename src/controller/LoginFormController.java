@@ -1,10 +1,12 @@
 package controller;
 
+import animatefx.animation.Pulse;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -42,8 +44,9 @@ public class LoginFormController {
 
                 Stage window = (Stage) this.root.getScene().getWindow();
                 try {
-                    window.setScene(new Scene(FXMLLoader.load((this.getClass()
-                            .getResource("/view/DashboardForm.fxml")))));
+                    Parent root =  FXMLLoader.load(this.getClass().getResource("../view/DashboardForm.fxml"));
+                    new Pulse(root).play();
+                    window.setScene(new Scene(root));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

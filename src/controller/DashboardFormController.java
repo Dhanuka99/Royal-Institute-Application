@@ -1,7 +1,9 @@
 package controller;
 
+import animatefx.animation.Pulse;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -57,10 +59,12 @@ setUi("StudentRegiterForm");
     }
 
     private void setUi(String location) throws IOException {
-        mainPanel.getChildren().clear();
-        mainPanel.getChildren().add(FXMLLoader.
+       Parent r =  FXMLLoader.
                 load((this.getClass()
-                        .getResource("/view/" + location + ".fxml"))));
+                        .getResource("/view/" + location + ".fxml")));
+       new Pulse(r).play();
+        mainPanel.getChildren().clear();
+        mainPanel.getChildren().add(r);
         // primaryStage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("view/LoginForm.fxml"))));
     }
 
