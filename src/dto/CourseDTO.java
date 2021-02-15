@@ -21,6 +21,13 @@ public class CourseDTO {
         this.registers = registers;
     }
 
+    public CourseDTO(String cID, String cName, String cType, String cDuration) {
+        this.cID = cID;
+        this.cName = cName;
+        this.cType = cType;
+        this.cDuration = cDuration;
+    }
+
     public String getcID() {
         return cID;
     }

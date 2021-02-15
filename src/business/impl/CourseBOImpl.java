@@ -8,6 +8,9 @@ import dao.impl.CourseDAOImpl;
 import dto.CourseDTO;
 import entity.Course;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CourseBOImpl implements CourseBO {
     CourseDAOImpl dao = DAOFactory.getInstance().getDAO(DAOType.COURSEDAO);
 
@@ -29,5 +32,16 @@ public class CourseBOImpl implements CourseBO {
             return "E0"+newInt;
         }return "E"+newInt;
 
+    }
+
+    @Override
+    public List<CourseDTO> getAllCourses() throws Exception {
+        List<Course> all = dao.getAll();
+        List<CourseDTO> allStudents = new ArrayList<>();
+        for (Course c : all) {
+            allStudents.add(new CourseDTO(c.getCourseCode(),c.getCourseName(),c.getCourseType(),c.getDuration()));
+        }
+
+        return allStudents;
     }
 }
