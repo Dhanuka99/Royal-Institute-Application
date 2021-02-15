@@ -28,6 +28,15 @@ public class StudentDTO {
         this.registers = registers;
     }
 
+    public StudentDTO(String stID, String name, String address, String contact, String dob, String gender) {
+        this.stID = stID;
+        this.name = name;
+        this.address = address;
+        this.contact = contact;
+        this.dob = dob;
+        this.gender = gender;
+    }
+
     public String getGender() {
         return gender;
     }

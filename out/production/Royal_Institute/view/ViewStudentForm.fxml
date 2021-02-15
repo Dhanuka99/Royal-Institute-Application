@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewStudentFormController">
    <children>
@@ -23,33 +20,14 @@
                   </Label>
                </children>
             </Pane>
-            <TableView fx:id="tblCourses" editable="true" fixedCellSize="0.0" layoutX="5.0" layoutY="271.0" prefHeight="148.0" prefWidth="772.0" style="-fx-background-color: gray;" visible="false">
-               <columns>
-                  <TableColumn fx:id="cmbRegID" prefWidth="111.0" text="Register ID" />
-                  <TableColumn fx:id="cmbStudentID" prefWidth="159.0" text="Student ID" />
-                  <TableColumn fx:id="cmbCourseID" prefWidth="170.0" text="Course ID" />
-                  <TableColumn fx:id="cmbRegDate" prefWidth="171.0" text="Date" />
-                  <TableColumn fx:id="cmbRegFee" prefWidth="160.0" text="Registration Fee" />
-               </columns>
-            </TableView>
-            <JFXButton fx:id="btnRemoveCourse" layoutX="509.0" layoutY="221.0" onAction="#removeOnAction" prefHeight="33.0" prefWidth="117.0" style="-fx-background-color: #ED6348;" text="Remove Course" textFill="WHITE" visible="false">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <JFXButton fx:id="btnAdductors" layoutX="392.0" layoutY="221.0" onAction="#AddCourseOnAction" prefHeight="33.0" prefWidth="96.0" style="-fx-background-color: #3FC4E0;" text="Add Course" textFill="WHITE" visible="false">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
-            <TableView layoutY="84.0" prefHeight="386.0" prefWidth="772.0">
+            <TableView fx:id="tblStudent" layoutY="84.0" prefHeight="386.0" prefWidth="772.0">
               <columns>
-                <TableColumn prefWidth="111.0" text="Student ID" />
-                <TableColumn prefWidth="160.0" text="Student Name" />
-                  <TableColumn prefWidth="143.0" text="Address" />
-                  <TableColumn prefWidth="116.0" text="Contact" />
-                  <TableColumn prefWidth="126.0" text="Date of Birth" />
-                  <TableColumn prefWidth="114.0" text="Gender" />
+                <TableColumn fx:id="clmStid" prefWidth="111.0" text="Student ID" />
+                <TableColumn fx:id="clmSname" prefWidth="160.0" text="Student Name" />
+                  <TableColumn fx:id="cmlSaddress" prefWidth="143.0" text="Address" />
+                  <TableColumn fx:id="clmScontact" prefWidth="116.0" text="Contact" />
+                  <TableColumn fx:id="clmSBirth" prefWidth="126.0" text="Date of Birth" />
+                  <TableColumn fx:id="clmSgender" prefWidth="114.0" text="Gender" />
               </columns>
             </TableView>
          </children>

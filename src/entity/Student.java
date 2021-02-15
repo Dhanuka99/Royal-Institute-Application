@@ -38,6 +38,8 @@ public class Student implements SuperEntity {
         this.registers = registers;
     }
 
+
+
     public List<Register> getRegisters() {
         return registers;
     }

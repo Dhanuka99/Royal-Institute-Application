@@ -45,12 +45,8 @@ public class StudentDAOImpl implements StudentDAO {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-
-        Query from_student = session.createSQLQuery("select * from Student");
+        Query from_student = session.createQuery("from Student");
         List<Student> list = from_student.list();
-        for (Student student : list) {
-            System.out.printf(student.getStudentID());
-        }
 
         transaction.commit();
         session.close();

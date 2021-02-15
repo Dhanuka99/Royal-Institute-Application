@@ -82,4 +82,12 @@ setUi("StudentRegiterForm");
         String s = LocalTime.now().toString();
         lblTime.setText(s);
     }
+
+    public void viewCourseOnMouseClicked(MouseEvent mouseEvent) throws IOException {
+        setUi("ViewCourseForm");
+    }
+
+    public void viewStudentOnMouseClicked(MouseEvent mouseEvent) throws IOException {
+        setUi("ViewStudentForm");
+    }
 }
