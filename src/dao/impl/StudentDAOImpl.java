@@ -5,9 +5,11 @@ import entity.Student;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 import util.FactoryConfiguration;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class StudentDAOImpl implements StudentDAO {
     @Override
@@ -28,17 +30,43 @@ public class StudentDAOImpl implements StudentDAO {
 
     @Override
     public Boolean update(Student entity) throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.update(entity);
+
+        transaction.commit();
+        session.close();
+        return true;
     }
 
     @Override
-    public ArrayList<Student> getAll() throws Exception {
-        return null;
+    public List<Student> getAll() throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+
+        Query from_student = session.createSQLQuery("select * from Student");
+        List<Student> list = from_student.list();
+        for (Student student : list) {
+            System.out.printf(student.getStudentID());
+        }
+
+        transaction.commit();
+        session.close();
+        return list;
     }
 
     @Override
     public Student findByID(String s) throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Student student = session.get(Student.class, s);
+        System.out.println(student.getStudentID()+" "+student.getStudentName());
+        transaction.commit();
+        session.close();
+        return student;
     }
 
     @Override

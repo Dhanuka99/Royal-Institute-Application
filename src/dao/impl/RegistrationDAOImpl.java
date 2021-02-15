@@ -29,7 +29,14 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 
     @Override
     public Boolean update(Register entity) throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.update(entity);
+
+        transaction.commit();
+        session.close();
+        return true;
     }
 
     @Override
@@ -39,7 +46,15 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 
     @Override
     public Register findByID(String s) throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        Register register = session.get(Register.class, s);
+
+
+        transaction.commit();
+        session.close();
+        return register;
     }
 
     @Override

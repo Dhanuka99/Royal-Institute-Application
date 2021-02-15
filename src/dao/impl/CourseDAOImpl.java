@@ -29,6 +29,13 @@ public class CourseDAOImpl implements CourseDAO {
 
     @Override
     public Boolean update(Course entity) throws Exception {
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.update(entity);
+
+        transaction.commit();
+        session.close();
         return null;
     }
 
