@@ -47,12 +47,12 @@ public class StudentBOImpl implements StudentBO {
     public List<StudentDTO> getAllStudent() throws Exception {
         List<Student> all = dao.getAll();
         List<StudentDTO> allStudent = new ArrayList<>();
-     //   List<Register> registers = new ArrayList<>();
+
         for (Student s : all) {
             allStudent.add(new StudentDTO(s.getStudentID(),s.getStudentName(),s.getStudentAddress(),s.getStudentContact(),s.getStudentDOB(),s.getStudentGender()));
         }
 
-        return null;
+        return allStudent;
     }
 
 

@@ -47,7 +47,9 @@ public class StudentDAOImpl implements StudentDAO {
 
         Query from_student = session.createQuery("from Student");
         List<Student> list = from_student.list();
-
+        for (Student student : list) {
+            System.out.println("from database to dao"+student.getStudentName());
+        }
         transaction.commit();
         session.close();
         return list;

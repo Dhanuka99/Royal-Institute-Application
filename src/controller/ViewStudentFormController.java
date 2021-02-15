@@ -38,13 +38,13 @@ public class ViewStudentFormController {
 
     StudentBOImpl bo = BOFactory.getInstance().getBO(BOType.STUDENTBO);
 
-    public void initialize(){
+    public void initialize() throws Exception {
         getAll();
     }
 
-    private void getAll(){
-        try {
-            clmStid.setCellValueFactory(new PropertyValueFactory<StudentDTO,String>("studentID"));
+    private void getAll() throws Exception {
+
+            clmStid.setCellValueFactory(new PropertyValueFactory<>("studentID"));
             clmSname.setCellValueFactory(new PropertyValueFactory<>("studentName"));
             cmlSaddress.setCellValueFactory(new PropertyValueFactory<>("studentAddress"));
             clmScontact.setCellValueFactory(new PropertyValueFactory<>("studentContact"));
@@ -55,9 +55,7 @@ public class ViewStudentFormController {
             tblStudent.setItems(FXCollections.observableArrayList(allStudent));
 
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 
     private void setColumn(){
