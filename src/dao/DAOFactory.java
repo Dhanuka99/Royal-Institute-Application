@@ -1,6 +1,7 @@
 package dao;
 
 import dao.impl.CourseDAOImpl;
+import dao.impl.LoginDetailsDAOImpl;
 import dao.impl.RegistrationDAOImpl;
 import dao.impl.StudentDAOImpl;
 
@@ -21,6 +22,7 @@ public class DAOFactory {
             case COURSEDAO:return (T) new CourseDAOImpl();
             case STUDENTDAO:return (T) new StudentDAOImpl();
             case REGISTERDAO:return (T) new RegistrationDAOImpl();
+            case LoginDetailsDAO: return (T) new LoginDetailsDAOImpl();
             default : return null;
         }
     }

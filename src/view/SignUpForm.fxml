@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
@@ -12,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="354.0" prefWidth="416.0" style="-fx-background-color: #3A4652;" styleClass="class-loginForm" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane fx:id="root" prefHeight="354.0" prefWidth="416.0" style="-fx-background-color: #3A4652;" styleClass="class-loginForm" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignupController">
    <children>
       <AnchorPane layoutY="70.0" prefHeight="388.0" prefWidth="416.0" style="-fx-background-color: #F7F7F7;">
          <children>
@@ -22,11 +21,10 @@
                </cursor>
             </JFXButton>
             <JFXTextField fx:id="txtUserName" layoutX="93.0" layoutY="91.0" prefHeight="29.0" prefWidth="288.0" promptText="User Name" text="Dhanuka" />
-            <JFXPasswordField fx:id="PSpassword" layoutX="93.0" layoutY="148.0" prefHeight="25.0" prefWidth="288.0" promptText="Password" text="1234" />
-            <JFXTextArea fx:id="label" focusColor="WHITE" layoutX="303.0" layoutY="137.0" prefHeight="0.0" prefWidth="65.0" />
-            <Pane layoutX="38.0" layoutY="233.0" onMouseClicked="#loginOnAction" prefHeight="54.0" prefWidth="351.0" styleClass="color-panel" stylesheets="@../style.css">
+            <JFXPasswordField fx:id="txtpassword" layoutX="93.0" layoutY="148.0" prefHeight="25.0" prefWidth="288.0" promptText="Password" text="1234" />
+            <Pane layoutX="38.0" layoutY="233.0" onMouseClicked="#SignUpOnMouseClicked" prefHeight="54.0" prefWidth="351.0" styleClass="color-panel" stylesheets="@../style.css">
                <children>
-                  <Label layoutX="126.0" layoutY="5.0" text="Log In" textFill="#343a40">
+                  <Label layoutX="118.0" layoutY="5.0" text="Sign Up" textFill="#343a40">
                      <font>
                         <Font name="Candara Bold" size="37.0" />
                      </font>
@@ -46,12 +44,11 @@
                   <Image url="@../asserts/icons8-forgot-password-50.png" />
                </image>
             </ImageView>
-            <Label layoutX="43.0" layoutY="303.0" text="* Are u new User ?" />
-            <Label layoutX="57.0" layoutY="325.0" onMouseClicked="#SignUpOnMouseClicked" text="Please Signup" textFill="#0073ff" />
-            <JFXTextField fx:id="txtUserID" layoutX="93.0" layoutY="48.0" prefHeight="25.0" prefWidth="288.0" promptText="User ID" />
+            <Label layoutX="165.0" layoutY="14.0" text="Genarate Your Ligin ID:" />
+            <Label fx:id="lblLoginID" layoutX="305.0" layoutY="14.0" text="CT001" textFill="LIME" />
          </children>
       </AnchorPane>
-      <Label layoutX="164.0" layoutY="14.0" text="Login" textFill="WHITE">
+      <Label layoutX="147.0" layoutY="14.0" text="Sign up " textFill="WHITE">
          <font>
             <Font name="Candara Bold" size="36.0" />
          </font>

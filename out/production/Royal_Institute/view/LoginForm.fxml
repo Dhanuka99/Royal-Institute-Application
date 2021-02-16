@@ -46,9 +46,12 @@
                   <Image url="@../asserts/icons8-forgot-password-50.png" />
                </image>
             </ImageView>
+            <Label layoutX="43.0" layoutY="303.0" text="* Are u new User ?" />
+            <Label layoutX="57.0" layoutY="325.0" onMouseClicked="#SignUpOnMouseClicked" text="Please Signup" textFill="#0073ff" />
+            <JFXTextField fx:id="txtUserID" layoutX="93.0" layoutY="48.0" prefHeight="25.0" prefWidth="288.0" promptText="User ID" />
          </children>
       </AnchorPane>
-      <Label layoutX="124.0" layoutY="14.0" text="LoginForm" textFill="WHITE">
+      <Label layoutX="164.0" layoutY="14.0" text="Login" textFill="WHITE">
          <font>
             <Font name="Candara Bold" size="36.0" />
          </font>

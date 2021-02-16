@@ -1,0 +1,18 @@
+insert into Student
+values("C001","Kurunegala","0112121333","1999-12-22","Male","Dhanuka");
+
+insert into Course
+values("E001","IT","Diploma","6 month");
+
+insert into Register
+values("R001","2021-02-15","5000.00","E001","C001");
+
+insert into LoginDetails
+values("L001","dhanuka","d1234");
+
+create table LoginDetails(
+loginID varchar(255),
+loginName varchar(255),
+loginPassword varchar(255)
+);
+

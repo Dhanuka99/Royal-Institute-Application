@@ -62,7 +62,7 @@ setUi("StudentRegiterForm");
        Parent r =  FXMLLoader.
                 load((this.getClass()
                         .getResource("/view/" + location + ".fxml")));
-       new Pulse(r).play();
+
         mainPanel.getChildren().clear();
         mainPanel.getChildren().add(r);
         // primaryStage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("view/LoginForm.fxml"))));

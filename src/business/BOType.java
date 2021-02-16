@@ -1,5 +1,5 @@
 package business;
 
 public enum BOType {
-    COURSEBO,STUDENTBO,REGISTERBO
+    COURSEBO,STUDENTBO,REGISTERBO,LoginDetailsBO
 }
