@@ -31,14 +31,15 @@
       alt="Standard" />
   </a>
 </div>
-
-
 <div align="center" >
   <sub>The little framework that could. Built with ❤︎ by
   <a href="https://www.facebook.com/dhanuka.lakshan.395/">Dhanuka Lakshan</a>
 </div>
-  
   <div align="center">
+  <div>
+    <h3>Login Form</h3>
+    <img src=" https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/4.png" alt="login form" width =auto height = 450px />
+    </div>
   <div>
     <h3>Student Form :-</h3>
     <img src="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/1.png" alt="student form" width =auto height = 450px />
@@ -49,7 +50,7 @@
     </div>
     <div>
     <h3>Registration Form :-</h3>
-    <img src="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/Untitled.png" alt="Registration form" width =auto height = 450px />
+    <img src="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/Untitled.png" alt="Registration form" width =auto height = 450px/>
     </div>
   </div>
  :star: Star us on GitHub — it helps!
