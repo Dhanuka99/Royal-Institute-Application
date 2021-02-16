@@ -40,6 +40,10 @@
   
   <div align="center">
   <div>
+    <h3>Login Form</h3>
+    <img src=" https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/4.png" alt="student form" width =auto height = 450px />
+    </div>
+  <div>
     <h3>Student Form :-</h3>
     <img src="https://github.com/Dhanuka99/Royal-Institute-Application/blob/main/src/project_photos/1.png" alt="student form" width =auto height = 450px />
     </div>
