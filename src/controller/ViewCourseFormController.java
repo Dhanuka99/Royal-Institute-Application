@@ -4,44 +4,56 @@ import business.BOFactory;
 import business.BOType;
 import business.impl.CourseBOImpl;
 import dto.CourseDTO;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import view.tm.CourseTM;
 
 import java.util.List;
 
 public class ViewCourseFormController {
 
     @FXML
-    private TableView<?> tblCourse;
+    private TableView<CourseTM> tblCourse;
 
     @FXML
-    private TableView<CourseDTO> tblStudent;
+    private TableColumn<CourseTM, String> colCid;
 
     @FXML
-    private TableColumn<CourseDTO, String> colCid;
+    private TableColumn<CourseTM, String> colCname;
 
     @FXML
-    private TableColumn<CourseDTO, String> colCname;
+    private TableColumn<CourseTM, String> colCtype;
 
     @FXML
-    private TableColumn<CourseDTO, String> colCtype;
-
-    @FXML
-    private TableColumn<CourseDTO, String> colCduration;
+    private TableColumn<CourseTM, String> colCduration;
 
     CourseBOImpl bo = BOFactory.getInstance().getBO(BOType.COURSEBO);
 
+    public void initialize() throws Exception {
+        getAllCourses();
+    }
+
     private void getAllCourses() throws Exception {
-        colCid.setCellValueFactory(new PropertyValueFactory<>("courseCode"));
-        colCname.setCellValueFactory(new PropertyValueFactory<>("courseName"));
-        colCtype.setCellValueFactory(new PropertyValueFactory<>("courseType"));
-        colCduration.setCellValueFactory(new PropertyValueFactory<>("courseDuration"));
+        colCid.setCellValueFactory(new PropertyValueFactory<>("cID"));
+        colCname.setCellValueFactory(new PropertyValueFactory<>("cName"));
+        colCtype.setCellValueFactory(new PropertyValueFactory<>("cType"));
+        colCduration.setCellValueFactory(new PropertyValueFactory<>("cDuration"));
 
         List<CourseDTO> allCourses = bo.getAllCourses();
-      //  tblCourse.setItems(FXCollections.observableArrayList(allCourses));
-
+        ObservableList<CourseTM> list = FXCollections.observableArrayList();
+        for (CourseDTO a : allCourses) {
+            list.add(new CourseTM(
+                    a.getcID(),
+                    a.getcName(),
+                    a.getcType(),
+                    a.getcDuration()
+            ));
+        }
+        System.out.println(list);
+        tblCourse.setItems(list);
 
 
     }

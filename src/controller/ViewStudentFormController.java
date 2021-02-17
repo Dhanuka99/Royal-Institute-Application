@@ -44,14 +44,14 @@ public class ViewStudentFormController {
 
     private void getAll() throws Exception {
 
-            clmStid.setCellValueFactory(new PropertyValueFactory<>("studentID"));
-            clmSname.setCellValueFactory(new PropertyValueFactory<>("studentName"));
-            cmlSaddress.setCellValueFactory(new PropertyValueFactory<>("studentAddress"));
-            clmScontact.setCellValueFactory(new PropertyValueFactory<>("studentContact"));
-            clmSBirth.setCellValueFactory(new PropertyValueFactory<>("studentDOB"));
-            clmSgender.setCellValueFactory(new PropertyValueFactory<>("studentGender"));
+            clmStid.setCellValueFactory(new PropertyValueFactory<>("stID"));
+            clmSname.setCellValueFactory(new PropertyValueFactory<>("name"));
+            cmlSaddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+            clmScontact.setCellValueFactory(new PropertyValueFactory<>("contact"));
+            clmSBirth.setCellValueFactory(new PropertyValueFactory<>("dob"));
+            clmSgender.setCellValueFactory(new PropertyValueFactory<>("gender"));
             List<StudentDTO> allStudent = bo.getAllStudent();
-
+        System.out.println(allStudent);
             tblStudent.setItems(FXCollections.observableArrayList(allStudent));
 
 
